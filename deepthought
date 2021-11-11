@@ -1,0 +1,736 @@
+
+= Norminette ===================================================================
+$> norminette
+ft_atoi.c: OK!
+ft_bzero.c: OK!
+ft_calloc.c: OK!
+ft_isalnum.c: OK!
+ft_isalpha.c: OK!
+ft_isascii.c: OK!
+ft_isdigit.c: OK!
+ft_isprint.c: OK!
+ft_memccpy.c: OK!
+ft_memchr.c: OK!
+ft_memcmp.c: OK!
+ft_memcpy.c: OK!
+ft_memmove.c: OK!
+ft_memset.c: OK!
+ft_strchr.c: OK!
+ft_strdup.c: OK!
+ft_strlcat.c: OK!
+ft_strlcpy.c: OK!
+ft_strlen.c: OK!
+ft_strncmp.c: OK!
+ft_strnstr.c: OK!
+ft_strrchr.c: OK!
+ft_substr.c: OK!
+ft_tolower.c: OK!
+ft_toupper.c: OK!
+libft.h: Error!
+Error: CONSECUTIVE_NEWLINES (line:  45, col:   1):	Consecutive newlines
+= Compiling libft ==============================================================
+$> make all
+gcc -Wall -Wextra -Werror -I.   -c -o ft_isalnum.o ft_isalnum.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_isprint.o ft_isprint.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_isalpha.o ft_isalpha.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strchr.o ft_strchr.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_tolower.o ft_tolower.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_isascii.o ft_isascii.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strlen.o ft_strlen.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_toupper.o ft_toupper.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_isdigit.o ft_isdigit.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memset.o ft_memset.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_atoi.o ft_atoi.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_bzero.o ft_bzero.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_calloc.o ft_calloc.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memccpy.o ft_memccpy.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memchr.o ft_memchr.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memcmp.o ft_memcmp.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memcpy.o ft_memcpy.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memmove.o ft_memmove.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strdup.o ft_strdup.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strlcat.o ft_strlcat.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strncmp.o ft_strncmp.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strlcpy.o ft_strlcpy.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strrchr.o ft_strrchr.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strnstr.o ft_strnstr.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_substr.o ft_substr.c
+ar rcs libft.a ft_isalnum.o ft_isprint.o ft_isalpha.o ft_strchr.o ft_tolower.o ft_isascii.o ft_strlen.o ft_toupper.o ft_isdigit.o ft_memset.o ft_atoi.o ft_bzero.o ft_calloc.o ft_memccpy.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_strdup.o ft_strlcat.o ft_strncmp.o ft_strlcpy.o ft_strrchr.o ft_strnstr.o ft_substr.o
+
+$> make clean
+rm -f ft_isalnum.o ft_isprint.o ft_isalpha.o ft_strchr.o ft_tolower.o ft_isascii.o ft_strlen.o ft_toupper.o ft_isdigit.o ft_memset.o ft_atoi.o ft_bzero.o ft_calloc.o ft_memccpy.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_strdup.o ft_strlcat.o ft_strncmp.o ft_strlcpy.o ft_strrchr.o ft_strnstr.o ft_substr.o 
+
+$> make libft.a
+gcc -Wall -Wextra -Werror -I.   -c -o ft_isalnum.o ft_isalnum.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_isprint.o ft_isprint.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_isalpha.o ft_isalpha.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strchr.o ft_strchr.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_tolower.o ft_tolower.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_isascii.o ft_isascii.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strlen.o ft_strlen.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_toupper.o ft_toupper.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_isdigit.o ft_isdigit.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memset.o ft_memset.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_atoi.o ft_atoi.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_bzero.o ft_bzero.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_calloc.o ft_calloc.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memccpy.o ft_memccpy.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memchr.o ft_memchr.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memcmp.o ft_memcmp.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memcpy.o ft_memcpy.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memmove.o ft_memmove.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strdup.o ft_strdup.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strlcat.o ft_strlcat.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strncmp.o ft_strncmp.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strlcpy.o ft_strlcpy.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strrchr.o ft_strrchr.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strnstr.o ft_strnstr.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_substr.o ft_substr.c
+ar rcs libft.a ft_isalnum.o ft_isprint.o ft_isalpha.o ft_strchr.o ft_tolower.o ft_isascii.o ft_strlen.o ft_toupper.o ft_isdigit.o ft_memset.o ft_atoi.o ft_bzero.o ft_calloc.o ft_memccpy.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_strdup.o ft_strlcat.o ft_strncmp.o ft_strlcpy.o ft_strrchr.o ft_strnstr.o ft_substr.o
+$> make -C /media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES all 1>/dev/null 2>&1
+= Tests ========================================================================
+= Required Functions ===========================================================
+= ft_isalpha 
+
+= ft_isdigit 
+
+= ft_isalnum 
+
+= ft_isascii 
+
+= ft_isprint 
+
+= ft_strlen 
+
+= ft_memset 
+
+= ft_bzero 
+
+= ft_memcpy 
+
+= ft_memmove 
+
+= ft_strlcpy 
+
+= ft_strlcat 
+
+= ft_toupper 
+
+= ft_tolower 
+
+= ft_strchr 
+
+= ft_strrchr 
+
+= ft_strncmp 
+
+= ft_memchr 
+
+= ft_memcmp 
+
+= ft_strnstr 
+
+= ft_atoi 
+
+= ft_strdup 
+
+= ft_calloc 
+
+= ft_memccpy 
+
+= Test 01_ft_isalpha.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/01_ft_isalpha.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 22 tests...
+[OK] when char is a and comparint with original
+
+[OK] when char is A
+
+[OK] when char is A and comparint with original
+
+[OK] when char is z
+
+[OK] when char is z and comparint with original
+
+[OK] when char is Z
+
+[OK] when char is Z and comparint with original
+
+[OK] when char is 1
+
+[OK] when char is 1 and comparint with original
+
+[OK] when char is  
+
+[OK] when char is   and comparint with original
+
+[OK] when char is 
+
+[OK] when char is 
+
+[OK] when char is `
+
+[OK] when char is ` and comparint with original
+
+[OK] when char is @
+
+[OK] when char is @ and comparint with original
+
+[OK] when char is {
+
+[OK] when char is { and comparint with original
+
+[OK] when char is [
+
+[OK] when char is [ and comparint with original
+
+
+
+
+= Test 02_ft_isprint.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/02_ft_isprint.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 7 tests...
+[OK] when char is ~
+
+[OK] when char is d
+
+[OK] when char is 
+
+[OK] when char is 
+
+Binary file (standard input) matches
+
+Binary file (standard input) matches
+
+
+
+
+= Test 03_ft_memcpy.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/03_ft_memcpy.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 9 tests...
+[OK] when copying  bytes from str to str
+
+[OK] when copying 
+ bytes from str to str
+
+[OK] when copying 
+
+[OK] when copying  bytes from int memory space to int memory space
+
+[OK] when copying 
+ bytes from int memory space to int memory space
+
+[OK] when copying 
+
+[OK] when copying  bytes from int memory space to int memory space
+
+[OK] when copying 
+ bytes from int memory space to int memory space
+
+
+
+
+= Test 04_ft_toupper.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/04_ft_toupper.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 12 tests...
+[OK] when char is g
+9710312265719048495740450
+
+[OK] when char is z
+9710312265719048495740450
+
+[OK] when char is A
+9710312265719048495740450
+
+[OK] when char is G
+9710312265719048495740450
+
+[OK] when char is Z
+9710312265719048495740450
+
+[OK] when char is 0
+9710312265719048495740450
+
+[OK] when char is 1
+9710312265719048495740450
+
+[OK] when char is 9
+9710312265719048495740450
+
+[OK] when char is (
+9710312265719048495740450
+
+[OK] when char is -
+9710312265719048495740450
+
+[OK] when char is 
+9710312265719048495740450
+
+9710312265719048495740450
+
+
+= Test 05_ft_strncmp.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/05_ft_strncmp.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 28 tests...
+[OK] When s1 is 'aba' and s2 = 'aaa' and comparing 3 chars
+
+[OK] When s1 is 'aab' and s2 = 'aaa' and comparing 3 chars
+
+[OK] When s1 is 'aaa' and s2 = 'baa' and comparing 3 chars
+
+[OK] When s1 is 'aaa' and s2 = 'aba' and comparing 3 chars
+
+[OK] When s1 is 'aaa' and s2 = 'aab' and comparing 3 chars
+
+[OK] When s1 is '' and s2 = '' and comparing 3 chars
+
+[OK] When s1 is 'a' and s2 = 'a' and comparing 3 chars
+
+[OK] When s1 is 'aa' and s2 = 'aa' and comparing 3 chars
+
+[OK] When s1 is 'aaa' and s2 = 'aaa' and comparing 3 chars
+
+[OK] When s1 is '' and s2 = 'a' and comparing 2 chars
+
+[OK] When s1 is 'a' and s2 = 'aa' and comparing 2 chars
+
+[OK] When s1 is 'a' and s2 = '' and comparing 2 chars
+
+[OK] When s1 is 'aa' and s2 = 'a' and comparing 2 chars
+
+[OK] When s1 is 'a' and s2 = 'aa' and comparing 1 chars
+
+[OK] When s1 is 'ab' and s2 = 'aaa' and comparing 2 chars
+
+[OK] When s1 is 'aa' and s2 = 'a' and comparing 1 chars
+
+[OK] When s1 is 'aaa' and s2 = 'ba' and comparing 2 chars
+
+[OK] When s1 is 'a' and s2 = 'aa' and comparing 3 chars
+
+[OK] When s1 is 'ab' and s2 = 'aaa' and comparing 4 chars
+
+[OK] When s1 is 'aa' and s2 = 'a' and comparing 3 chars
+
+[OK] When s1 is 'aaa' and s2 = 'ba' and comparing 4 chars
+
+[OK] When s1 is 'a' and s2 = 'A' and comparing 1 chars
+
+[OK] When s1 is 'a' and s2 = 'A' and comparing 0 chars
+
+[OK] When s1 is 'a' and s2 = 'a' and comparing 0 chars
+
+[OK] When s1 is 'a' and s2 = 'aa' and comparing 0 chars
+
+[OK] When s1 is 'a' and s2 = 'aa' and comparing 0 chars
+
+Binary file (standard input) matches
+
+
+
+
+= Test 06_ft_atoi.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/06_ft_atoi.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 24 tests...
+[OK] When s1 is 20
+
+[OK] When s1 is 4587
+
+[OK] When s1 is +4587
+
+[OK] When s1 is 0
+
+[OK] When s1 is -1
+
+[OK] When s1 is -20
+
+[OK] When s1 is -4587
+
+[OK] When s1 is  1
+
+[OK] When s1 is  -1
+
+[OK] When s1 is    -1
+
+[OK] When s1 is 
+	1
+
+[OK] When s1 is -+1
+
+[OK] When s1 is ++1
+
+[OK] When s1 is --1
+
+[OK] When s1 is  -+1
+
+[OK] When s1 is -+1
+
+[OK] When s1 is ++1
+
+[OK] When s1 is --1
+
+[OK] When s1 is  -+1
+
+[OK] When s1 is   100a98
+
+[OK] When s1 is   100aaaa
+
+[OK] When s1 is   as100aaaa
+
+[OK] When s1 is   -as100aaaa
+
+
+
+
+= Test 07_ft_isdigit.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/07_ft_isdigit.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 8 tests...
+[OK] When c is 1
+
+[OK] When c is 9
+
+[OK] When c is a
+
+[OK] When c is  
+
+[OK] When c is <
+
+Binary file (standard input) matches
+
+[OK] When c is 
+
+
+
+
+= Test 08_ft_strlen.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/08_ft_strlen.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 4 tests...
+[OK] return 0 if empty string
+
+[OK] return 1 if string with 1 char
+
+[OK] return n if string with n char
+
+
+
+
+= Test 09_ft_memmove.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/09_ft_memmove.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 6 tests...
+[OK] moves simple strings
+
+Binary file (standard input) matches
+
+[OK] If dest starts after src
+
+[OK] If dest starts before src
+
+[OK] makes no changes to the strings
+
+
+
+
+= Test 10_ft_tolower.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/10_ft_tolower.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 12 tests...
+[OK] when char is G
+6571909710312248495740450
+
+[OK] when char is Z
+6571909710312248495740450
+
+[OK] when char is a
+6571909710312248495740450
+
+[OK] when char is g
+6571909710312248495740450
+
+[OK] when char is z
+6571909710312248495740450
+
+[OK] when char is 0
+6571909710312248495740450
+
+[OK] when char is 1
+6571909710312248495740450
+
+[OK] when char is 9
+6571909710312248495740450
+
+[OK] when char is (
+6571909710312248495740450
+
+[OK] when char is -
+6571909710312248495740450
+
+[OK] when char is 
+6571909710312248495740450
+
+6571909710312248495740450
+
+
+= Test 11_ft_memchr.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/11_ft_memchr.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 6 tests...
+[OK] finds c in abc
+
+[OK] finds a in abc
+
+[OK] finds null char in a[null]c
+
+[OK] return null if char not present
+
+[OK] return null if search n does not include c
+
+
+
+
+= Test 12_ft_strdup.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/12_ft_strdup.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 1 tests...
+	1 No Tests...
+	-- [NOK] Not implemented yet!
+
+
+= Test 13_ft_isalnum.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/13_ft_isalnum.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 10 tests...
+[OK] returns 1 for a
+
+[OK] returns 1 for z
+
+[OK] returns 1 for Z
+
+[OK] returns 1 for A
+
+[OK] returns 1 for 0
+
+[OK] returns 1 for 9
+
+[OK] returns 1 for 1
+
+[OK] returns 0 for '-'
+
+[OK] returns 0 for ' '
+
+
+
+
+= Test 14_ft_memset.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/14_ft_memset.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 5 tests...
+[OK] if n = 0, no bytes are changed
+
+[OK] if n > 0 and less than s size, no bytes are changed
+
+[OK] should work with non printable chars
+
+[OK] should work with non printable chars
+
+
+
+
+= Test 15_ft_strlcpy.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/15_ft_strlcpy.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 5 tests...
+[OK] should copy the full string if buff_size is equal to length
+
+[OK] should copy partial string if size less than length
+
+[OK] should copy the full string if buff_size bigger to length
+
+[OK] should copy the size - 1 if buff_size smaller then length
+
+
+
+
+= Test 16_ft_strchr.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/16_ft_strchr.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 4 tests...
+[OK] if string is not empty and char is found
+
+[OK] works with non pritable
+
+[OK] if string is empty
+
+
+
+
+= Test 17_ft_memcmp.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/17_ft_memcmp.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 9 tests...
+[OK] Returns 1 for string of same size and s1 > s2
+
+[OK] Returns 0 for string of same size and s1 = s2
+
+[OK] Returns -1 for string of same size and s1 < s2
+
+[OK] Returns 1 for string of same size and s1 > s2
+
+[OK] Returns 1 for string of same size and s1 > s2
+
+[OK] Returns -1 for string of same size and s1 < s2
+
+[OK] Returns 1 for string of same size and s1 > s2
+
+[OK] Returns 1 for string of same size and s1 > s2
+
+
+
+
+= Test 18_ft_calloc.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/18_ft_calloc.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 3 tests...
+[OK] returns a pointer to a memory space of  nmemb * sizeof element
+
+[OK] returns NULL if nmemb is 0
+
+
+
+
+= Test 19_ft_isascci.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/19_ft_isascci.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 10 tests...
+[OK] when char is 
+
+[OK] when char is 2
+
+[OK] when char is 2 and comparint with original
+
+[OK] when char is 
+
+[OK] when char is  and comparint with original
+
+Binary file (standard input) matches
+
+Binary file (standard input) matches
+
+Binary file (standard input) matches
+
+Binary file (standard input) matches
+
+
+
+
+= Test 20_ft_bzero.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/20_ft_bzero.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 2 tests...
+[OK] changes n bytes to 0
+
+
+
+
+= Test 21_ft_strlcat.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/21_ft_strlcat.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 9 tests...
+Binary file (standard input) matches
+
+[OK] should return the original if nothing is cat
+
+[OK] should copy if first char is NULL TERMINATOR
+
+[OK] should copy if first char is NULL TERMINATOR
+
+[OK] should concatenate until n
+
+[OK] should concat until 1
+
+[OK] should concat until 1
+
+[OK] should concat until 1
+
+
+
+
+= Test 22_ft_strrchr.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/22_ft_strrchr.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 5 tests...
+[OK] if no char is found
+
+[OK] if no char is found
+
+[OK] if s = abcd and c = b
+
+[OK] s = abcd and c = NULL
+
+
+
+
+= Test 23_ft_strnstr.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_1/23_ft_strnstr.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 5 tests...
+[OK] returns the first char of big where little is found
+
+[OK] returns the first char of big where little is found
+
+[OK] returns big if little is empty
+
+[OK] returns NULL if little not found
+
+
+
+
+= Required Functions ===========================================================
+= ft_substr 
+
+= ft_strjoin 
+
+= ft_strtrim 
+
+= ft_split 
+
+= ft_itoa 
+
+= ft_strmapi 
+
+= ft_striteri 
+
+= ft_putchar_fd 
+
+= ft_putstr_fd 
+
+= ft_putendl_fd 
+
+= ft_putnbr_fd 
+
+= Test 01_ft_substr.c ==================================================
+$> gcc -lbsd -Wextra -Wall -Werror /media/miguel/Core/ubunto/42school/libft_tests/tests/part_2/01_ft_substr.c -lbsd -L/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -lft -I/media/miguel/Core/ubunto/42school/libft_tests/TEMP_FILES -I/media/miguel/Core/ubunto/42school/libft_tests/core/framework /media/miguel/Core/ubunto/42school/libft_tests/core/framework/*.c  -o /media/miguel/Core/ubunto/42school/libft_tests/test_file 
+
+FOUND 5 tests...
+	1 if string = o meu nome e miguel and start = 0 and len = 5
+	-- [NOK] Recieved '' but Expected 'lorem', (null)
+
+	2 if string = o meu nome e miguel and start = 0 and len = 5
+	-- [NOK] Recieved '' but Expected 'ipsum', (null)
+
+	3 if string = o meu nome e miguel and start = 0 and len = 5
+	-- [NOK] Recieved '0x55705bec42a0' but Expected '(nil)', (null)
+
+	4 if string = o meu nome e miguel and start = 0 and len = 5
+	-- [NOK] Recieved '0x55d2e72c62a0' but Expected '(nil)', (null)
+
+	5 if string = o meu nome e miguel and start = 0 and len = 5
+	-- [NOK] Recieved '0x55f34c0372a0' but Expected '(nil)', (null)
+
