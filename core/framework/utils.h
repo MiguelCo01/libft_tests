@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   runner.c                                           :+:      :+:    :+:   */
+/*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmelo-da <mmelo-da@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: mmelo-da <mmelo-da@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/20 23:16:13 by mmelo-da          #+#    #+#             */
-/*   Updated: 2021/10/22 01:36:59 by mmelo-da         ###   ########lyon.fr   */
+/*   Created: 2021/11/06 11:45:08 by mmelo-da          #+#    #+#             */
+/*   Updated: 2021/11/06 18:58:52 by mmelo-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_tests.h"
+#ifndef UTILS_H
+# define UTILS_H
 
-int	main(void)
-{
-	test_isalpha();
-	test_toupper();
-	test_tolower();
-	test_isdigit();
-	test_isalnum();
-	test_isascii();
-	test_isprint();
-	return (0);
-}
+# include "stdarg.h"
+# include "stdio.h"
+# define MAX_ERROR_MSG_LEN 1024
+
+
+char	*formated_string(char *dst, char *string, ...);
+char	*str_to_hex_str(char* output, char* input, size_t size);
+#endif

@@ -1,0 +1,100 @@
+$> make -C /Users/mmelo-da/Documents/42Private/libft_tests/TEMP_FILES all 1>/dev/null 2>&1
+= Tests ========================================================================
+= Required Functions ===========================================================
+= ft_isalpha 
+
+= ft_isdigit 
+
+= ft_isalnum 
+
+= ft_isascii 
+
+= ft_isprint 
+
+= ft_strlen 
+
+= ft_memset 
+
+= ft_bzero 
+
+= ft_memcpy 
+
+= ft_memmove 
+
+= ft_strlcpy 
+
+= ft_strlcat 
+
+= ft_toupper 
+
+= ft_tolower 
+
+= ft_strchr 
+
+= ft_strrchr 
+
+= ft_strncmp 
+
+= ft_memchr 
+
+= ft_memcmp 
+
+= ft_strnstr 
+
+= ft_atoi 
+
+= ft_strdup 
+
+= ft_calloc 
+
+= ft_memccpy 
+
+= Required Functions ===========================================================
+= ft_substr 
+
+= ft_strjoin 
+
+= ft_strtrim 
+
+= ft_split 
+
+= ft_itoa 
+
+= ft_strmapi 
+
+= ft_striteri 
+
+= ft_putchar_fd 
+
+= ft_putstr_fd 
+
+= ft_putendl_fd 
+
+= ft_putnbr_fd 
+
+= Test 01_ft_substr.c =================================================
+$> gcc  -Wextra -Wall -Werror /Users/mmelo-da/Documents/42Private/libft_tests/tests/part_2/01_ft_substr.c -L/Users/mmelo-da/Documents/42Private/libft_tests/TEMP_FILES -lft -I/Users/mmelo-da/Documents/42Private/libft_tests/TEMP_FILES -I/Users/mmelo-da/Documents/42Private/libft_tests/core/framework /Users/mmelo-da/Documents/42Private/libft_tests/core/framework/*.c  -o /Users/mmelo-da/Documents/42Private/libft_tests/test_file 
+
+FOUND 4 tests...
+[OK] if string = 'o meu nome e miguel' and start = 0 and len = 5
+
+[OK] if string = 'o meu nome e miguel' and start = 0 and len = 5
+
+[OK] if string = '' and start = 6 and len = 5
+
+
+
+
+= Test 02_ft_strjoin.c =================================================
+$> gcc  -Wextra -Wall -Werror /Users/mmelo-da/Documents/42Private/libft_tests/tests/part_2/02_ft_strjoin.c -L/Users/mmelo-da/Documents/42Private/libft_tests/TEMP_FILES -lft -I/Users/mmelo-da/Documents/42Private/libft_tests/TEMP_FILES -I/Users/mmelo-da/Documents/42Private/libft_tests/core/framework /Users/mmelo-da/Documents/42Private/libft_tests/core/framework/*.c  -o /Users/mmelo-da/Documents/42Private/libft_tests/test_file 
+
+FOUND 3 tests...
+	1 should return the concatenation of 'Hello' and ' World'
+	-- [NOK] Recieved 'Hell W' but Expected 'Hello World', (null)
+
+	2 should return the concatenation of 'Hello' and ''
+	-- [NOK] Recieved 'Hell' but Expected 'Hello', (null)
+
+	3 should return the concatenation of '' and ' World'
+	-- [NOK] Recieved 'Hell W' but Expected ' World', (null)
+
