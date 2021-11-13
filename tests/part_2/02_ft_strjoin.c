@@ -6,7 +6,7 @@
 /*   By: mmelo-da <mmelo-da@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 20:18:35 by mmelo-da          #+#    #+#             */
-/*   Updated: 2021/11/11 20:35:12 by mmelo-da         ###   ########lyon.fr   */
+/*   Updated: 2021/11/13 15:39:59 by mmelo-da         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,11 @@ int	main(int argc, char **argv)
 			result = ft_strjoin("", " World");
 			assert_equal_str(result, " World", NULL);
 			free(result);
+		it("Malloc Fails");
+			mock_malloc(1);
+			result = ft_strjoin("", " World");
+			assert_equal_ptr(result, NULL, NULL);
+			mock_malloc(0);
 	end_describe();
 
 	return (test_status());

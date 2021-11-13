@@ -1,5 +1,142 @@
-$> make -C /Users/mmelo-da/Documents/42Private/libft_tests/TEMP_FILES all 1>/dev/null 2>&1
+
+= Norminette ===================================================================
+$> norminette
+ft_strnstr.c: OK!
+ft_isdigit.c: OK!
+ft_strlcpy.c: OK!
+ft_strlen.c: OK!
+ft_memcmp.c: OK!
+ft_strchr.c: OK!
+ft_bzero.c: OK!
+ft_strjoin.c: OK!
+ft_isascii.c: OK!
+libft.h: OK!
+ft_memcpy.c: OK!
+ft_memccpy.c: OK!
+ft_isprint.c: OK!
+ft_toupper.c: OK!
+ft_split.c: OK!
+ft_strrchr.c: OK!
+ft_isalpha.c: OK!
+ft_memchr.c: OK!
+ft_memset.c: OK!
+ft_substr.c: OK!
+ft_strncmp.c: OK!
+ft_strtrim.c: OK!
+ft_memmove.c: OK!
+ft_strlcat.c: OK!
+ft_calloc.c: OK!
+ft_strdup.c: OK!
+ft_atoi.c: OK!
+ft_isalnum.c: OK!
+ft_tolower.c: OK!
+= Compiling libft ==============================================================
+$> make all
+gcc -Wall -Wextra -Werror -I.   -c -o ft_isalnum.o ft_isalnum.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_isprint.o ft_isprint.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_isalpha.o ft_isalpha.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strchr.o ft_strchr.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_tolower.o ft_tolower.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_isascii.o ft_isascii.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strlen.o ft_strlen.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_toupper.o ft_toupper.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_isdigit.o ft_isdigit.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memset.o ft_memset.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_atoi.o ft_atoi.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_bzero.o ft_bzero.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_calloc.o ft_calloc.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memccpy.o ft_memccpy.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memchr.o ft_memchr.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memcmp.o ft_memcmp.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memcpy.o ft_memcpy.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memmove.o ft_memmove.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strdup.o ft_strdup.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strlcat.o ft_strlcat.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strncmp.o ft_strncmp.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strlcpy.o ft_strlcpy.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strrchr.o ft_strrchr.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strnstr.o ft_strnstr.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_substr.o ft_substr.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strjoin.o ft_strjoin.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strtrim.o ft_strtrim.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_split.o ft_split.c
+ar rcs libft.a ft_isalnum.o ft_isprint.o ft_isalpha.o ft_strchr.o ft_tolower.o ft_isascii.o ft_strlen.o ft_toupper.o ft_isdigit.o ft_memset.o ft_atoi.o ft_bzero.o ft_calloc.o ft_memccpy.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_strdup.o ft_strlcat.o ft_strncmp.o ft_strlcpy.o ft_strrchr.o ft_strnstr.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o
+
+$> make clean
+rm -f ft_isalnum.o ft_isprint.o ft_isalpha.o ft_strchr.o ft_tolower.o ft_isascii.o ft_strlen.o ft_toupper.o ft_isdigit.o ft_memset.o ft_atoi.o ft_bzero.o ft_calloc.o ft_memccpy.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_strdup.o ft_strlcat.o ft_strncmp.o ft_strlcpy.o ft_strrchr.o ft_strnstr.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o 
+
+$> make libft.a
+gcc -Wall -Wextra -Werror -I.   -c -o ft_isalnum.o ft_isalnum.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_isprint.o ft_isprint.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_isalpha.o ft_isalpha.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strchr.o ft_strchr.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_tolower.o ft_tolower.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_isascii.o ft_isascii.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strlen.o ft_strlen.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_toupper.o ft_toupper.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_isdigit.o ft_isdigit.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memset.o ft_memset.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_atoi.o ft_atoi.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_bzero.o ft_bzero.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_calloc.o ft_calloc.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memccpy.o ft_memccpy.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memchr.o ft_memchr.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memcmp.o ft_memcmp.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memcpy.o ft_memcpy.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_memmove.o ft_memmove.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strdup.o ft_strdup.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strlcat.o ft_strlcat.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strncmp.o ft_strncmp.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strlcpy.o ft_strlcpy.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strrchr.o ft_strrchr.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strnstr.o ft_strnstr.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_substr.o ft_substr.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strjoin.o ft_strjoin.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_strtrim.o ft_strtrim.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_split.o ft_split.c
+ar rcs libft.a ft_isalnum.o ft_isprint.o ft_isalpha.o ft_strchr.o ft_tolower.o ft_isascii.o ft_strlen.o ft_toupper.o ft_isdigit.o ft_memset.o ft_atoi.o ft_bzero.o ft_calloc.o ft_memccpy.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_strdup.o ft_strlcat.o ft_strncmp.o ft_strlcpy.o ft_strrchr.o ft_strnstr.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o
+$> make -C -g /goinfre/mmelo-da/42Private/libft_tests/TEMP_FILES all 1>/dev/null 2>&1
 = Tests ========================================================================
+= Required Functions ===========================================================
+= ft_substr 
+
+= ft_strjoin 
+
+= ft_strtrim 
+
+= ft_split 
+
+= ft_itoa 
+
+= ft_strmapi 
+
+= ft_striteri 
+
+= ft_putchar_fd 
+
+= ft_putstr_fd 
+
+= ft_putendl_fd 
+
+= ft_putnbr_fd 
+
+= Test 04_ft_split.c ==================================
+$> gcc  -Wextra -Wall -Werror /goinfre/mmelo-da/42Private/libft_tests/tests/part_2/04_ft_split.c  -L/goinfre/mmelo-da/42Private/libft_tests/TEMP_FILES -lft -I/goinfre/mmelo-da/42Private/libft_tests/TEMP_FILES  -I/goinfre/mmelo-da/42Private/libft_tests/core/framework /goinfre/mmelo-da/42Private/libft_tests/core/framework/*.c -o /goinfre/mmelo-da/42Private/libft_tests/test_file 
+
+FOUND 6 tests...
+[OK] should return Hello and World
+
+[OK] should return Hello and World and Yeah
+
+[OK] should empty string if no word is present
+
+[OK] should return the single word if no delimiter is present
+
+[OK] should return empty string between consecutive delimiter
+
+
+
+
 = Required Functions ===========================================================
 = ft_isalpha 
 
@@ -48,53 +185,3 @@ $> make -C /Users/mmelo-da/Documents/42Private/libft_tests/TEMP_FILES all 1>/dev
 = ft_calloc 
 
 = ft_memccpy 
-
-= Required Functions ===========================================================
-= ft_substr 
-
-= ft_strjoin 
-
-= ft_strtrim 
-
-= ft_split 
-
-= ft_itoa 
-
-= ft_strmapi 
-
-= ft_striteri 
-
-= ft_putchar_fd 
-
-= ft_putstr_fd 
-
-= ft_putendl_fd 
-
-= ft_putnbr_fd 
-
-= Test 01_ft_substr.c =================================================
-$> gcc  -Wextra -Wall -Werror /Users/mmelo-da/Documents/42Private/libft_tests/tests/part_2/01_ft_substr.c -L/Users/mmelo-da/Documents/42Private/libft_tests/TEMP_FILES -lft -I/Users/mmelo-da/Documents/42Private/libft_tests/TEMP_FILES -I/Users/mmelo-da/Documents/42Private/libft_tests/core/framework /Users/mmelo-da/Documents/42Private/libft_tests/core/framework/*.c  -o /Users/mmelo-da/Documents/42Private/libft_tests/test_file 
-
-FOUND 4 tests...
-[OK] if string = 'o meu nome e miguel' and start = 0 and len = 5
-
-[OK] if string = 'o meu nome e miguel' and start = 0 and len = 5
-
-[OK] if string = '' and start = 6 and len = 5
-
-
-
-
-= Test 02_ft_strjoin.c =================================================
-$> gcc  -Wextra -Wall -Werror /Users/mmelo-da/Documents/42Private/libft_tests/tests/part_2/02_ft_strjoin.c -L/Users/mmelo-da/Documents/42Private/libft_tests/TEMP_FILES -lft -I/Users/mmelo-da/Documents/42Private/libft_tests/TEMP_FILES -I/Users/mmelo-da/Documents/42Private/libft_tests/core/framework /Users/mmelo-da/Documents/42Private/libft_tests/core/framework/*.c  -o /Users/mmelo-da/Documents/42Private/libft_tests/test_file 
-
-FOUND 3 tests...
-	1 should return the concatenation of 'Hello' and ' World'
-	-- [NOK] Recieved 'Hell W' but Expected 'Hello World', (null)
-
-	2 should return the concatenation of 'Hello' and ''
-	-- [NOK] Recieved 'Hell' but Expected 'Hello', (null)
-
-	3 should return the concatenation of '' and ' World'
-	-- [NOK] Recieved 'Hell W' but Expected ' World', (null)
-

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   assertions.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmelo-da <mmelo-da@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: mmelo-da <mmelo-da@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 19:08:10 by mmelo-da          #+#    #+#             */
-/*   Updated: 2021/11/06 19:09:03 by mmelo-da         ###   ########.fr       */
+/*   Updated: 2021/11/13 17:51:42 by mmelo-da         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,16 @@ void	assert_equal_ptr(void *actual, void *expected, char *error_msg)
 
 void	assert_equal_str(char *actual, char *expected, char *error_msg)
 {
+	if (actual == NULL)
+	{
+		assertion_fail("Actual is (Nil) - %s", error_msg);
+		return ;
+	}
+	if (expected == NULL)
+	{
+		assertion_fail("Expected is (Nil) - %s", error_msg);
+		return ;
+	}
 	if (!!strcmp(actual, expected))
 	{
 		assertion_fail("Recieved '%s' but Expected '%s', %s",

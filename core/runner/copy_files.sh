@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    copy_files.sh                                      :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mmelo-da <mmelo-da@student.42lisboa.com>   +#+  +:+       +#+         #
+#    By: mmelo-da <mmelo-da@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 20:08:29 by mmelo-da          #+#    #+#              #
-#    Updated: 2021/11/06 11:20:17 by mmelo-da         ###   ########.fr        #
+#    Updated: 2021/11/13 19:03:42 by mmelo-da         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,10 @@ copying_files()
 
 rm_files()
 {
+	if [ -e ${PATH_TEST}/test_file.dSYM ]
+	then
+		rm -rf ${PATH_TEST}/test_file.dSYM
+	fi
 	if [ -e ${PATH_TEST}/test_file ]
 	then
 		rm ${PATH_TEST}/test_file

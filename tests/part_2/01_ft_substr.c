@@ -6,7 +6,7 @@
 /*   By: mmelo-da <mmelo-da@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 21:49:30 by mmelo-da          #+#    #+#             */
-/*   Updated: 2021/11/11 20:17:19 by mmelo-da         ###   ########lyon.fr   */
+/*   Updated: 2021/11/13 15:38:49 by mmelo-da         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ maximum size ’len’.
 */
 int	main(int argc, char **argv)
 {
-	char *s;
-	char *sub;
-	setup(argc, argv);
+	char	*s;
+	char	*sub;
 
+	setup(argc, argv);
 	describe("substr");
 		it("if string = 'o meu nome e miguel' and start = 0 and len = 5");
 			s = "lorem ipsum dolo";
@@ -47,6 +47,12 @@ int	main(int argc, char **argv)
 			sub = ft_substr(s, 6, 0);
 			assert_equal_str(sub, "", NULL);
 			free(sub);
+		it("if malloc fails return NULL");
+			s = "lorem ipsum dolo";
+			mock_malloc(1);
+			sub = ft_substr(s, 6, 0);
+			assert_equal_ptr(sub, NULL, NULL);
+			mock_malloc(0);
 	end_describe();
 
 	return (test_status());

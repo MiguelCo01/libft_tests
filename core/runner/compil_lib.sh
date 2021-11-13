@@ -13,8 +13,8 @@
 # **************************************************************************** #
 compile_binary()
 {
-	printf "$> make -C "$MK_PATH" all 1>/dev/null 2>&1" >> ${PATH_DEEPTHOUGHT}/deepthought
-	RESULT=$(make -C "$MK_PATH" all 1>&1 2>&1)
+	printf "$> make -C -g "$MK_PATH" all 1>/dev/null 2>&1" >> ${PATH_DEEPTHOUGHT}/deepthought
+	RESULT=$(make -C -g "$MK_PATH" all 1>&1 2>&1)
 	HAS_ERROR=$(echo ${RESULT} | grep errors)
 	if [ "${HAS_ERROR}" != "" ]
 	then

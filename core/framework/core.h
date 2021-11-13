@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   core.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmelo-da <mmelo-da@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: mmelo-da <mmelo-da@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 18:47:39 by mmelo-da          #+#    #+#             */
-/*   Updated: 2021/11/06 19:36:03 by mmelo-da         ###   ########.fr       */
+/*   Updated: 2021/11/13 15:26:00 by mmelo-da         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	assert_equal_ptr(void *actual, void *expected, char *error_msg);
 void	assert_equal_str(char *actual, char *expected, char *error_msg);
 void	assert_equal_memory(void *actual, void *expected, size_t size, char *error_msg);
 
-void 	setup(int argc, char **argv);
+void	setup(int argc, char **argv);
 
 void	describe(char *suite_name);
 void	end_describe(void);
@@ -43,7 +43,8 @@ void	end_it(void);
 void	assertion_fail(char *error_msg, ...);
 void	assertion_pass(void);
 
-
 int		test_status(void);
 void	todo(char *suite_name);
+
+void	mock_malloc(int mode);
 #endif

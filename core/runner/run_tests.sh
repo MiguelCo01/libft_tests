@@ -6,7 +6,7 @@
 #    By: mmelo-da <mmelo-da@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/04 09:08:00 by mmelo-da          #+#    #+#              #
-#    Updated: 2021/11/13 12:23:40 by mmelo-da         ###   ########lyon.fr    #
+#    Updated: 2021/11/13 18:02:14 by mmelo-da         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,14 @@ compile_test_file()
 
 	COMPIL_FLAGS="-Wextra -Wall -Werror"
 	MAIN_FILE="$1"
-	COMPIL_ARGS="${COMPIL_FLAGS} $1 -L${PATH_LIBFT} -lft -I${PATH_LIBFT} -I${PATH_TEST}/core/framework ${PATH_TEST}/core/framework/*.c "
+	FRAMEWORK="-I${PATH_TEST}/core/framework ${PATH_TEST}/core/framework/*.c"
+	if [ ${DEBUG} == 1 ]
+	then
+		COMPIL_ARGS="${COMPIL_FLAGS} $1 -g  -I${PATH_LIBFT} ${PATH_LIBFT}/*.c  ${FRAMEWORK}"
+	else
+		COMPIL_ARGS="${COMPIL_FLAGS} $1  -L${PATH_LIBFT} -lft -I${PATH_LIBFT}  ${FRAMEWORK}"
+	fi
+
 
 	printf "$> gcc  ${COMPIL_ARGS} -o ${PATH_TEST}/test_file \n\n" >> ${PATH_DEEPTHOUGHT}/deepthought
 	compilation_error=$(gcc  ${COMPIL_ARGS} -o ${PATH_TEST}/test_file 2>&1 >/dev/null)
@@ -70,7 +77,7 @@ run_single_test_file()
 {
 	printf "\033[${TESTS_COL}G"
 	retvalue=1
-	${PATH_TEST}/test_file -no-run 2>&1 1>/dev/null
+	DYLD_INSERT_LIBRARIES=${PATH_TEST}/core/framework/libmalloc_wrapper.so ${PATH_TEST}/test_file -no-run 2>&1 1>/dev/null
 	test_number=$?
 	printf "FOUND ${test_number} tests...\n" >> ${PATH_DEEPTHOUGHT}/deepthought
 	SUITE=

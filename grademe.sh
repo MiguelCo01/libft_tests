@@ -6,7 +6,7 @@
 #    By: mmelo-da <mmelo-da@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 13:11:44 by mmelo-da          #+#    #+#              #
-#    Updated: 2021/11/13 12:26:44 by mmelo-da         ###   ########lyon.fr    #
+#    Updated: 2021/11/13 19:09:57 by mmelo-da         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,7 @@ source ${PATH_TEST}/core/runner/run_tests.sh
 # SET options
 RUN_CORE=1
 RUN_TEST=1
+DEBUG=0
 
 # TESTS TO RUN
 TEST_PATTERN=
@@ -60,8 +61,12 @@ for arg in ${@}
 do
 	case "${arg}" in
 		"--test-only") RUN_CORE=0;;
+
 		--test-pattern=*)
 		declare -a TEST_PATTERN=($(echo "${arg#*=}" | tr "," " "));;
+
+		"--debug")
+		DEBUG=1;;
 		esac
 done
 
@@ -72,7 +77,10 @@ check_my_config_file
 source ${PATH_TEST}/my_config.sh
 
 # Copy Original Lib Files
-copying_files
+if [ ${DEBUG} == 0 ]
+then
+	copying_files
+fi
 clear
 
 # Start Ddebug file
@@ -105,5 +113,7 @@ then
 	printf "\n\n"
 	run_all_tests
 fi
-
-rm_files
+if [ ${DEBUG} == 0 ]
+then
+	rm_files
+fi
