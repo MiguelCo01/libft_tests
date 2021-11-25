@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   03_ft_memcpy.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmelo-da <mmelo-da@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: mmelo-da <mmelo-da@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 09:50:02 by mmelo-da          #+#    #+#             */
-/*   Updated: 2021/11/06 19:13:52 by mmelo-da         ###   ########.fr       */
+/*   Updated: 2021/11/24 18:24:07 by mmelo-da         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void test_memcpy(size_t n)
 {
 	char test_name[MAX_ERROR_MSG_LEN];
 
-	it(formated_string(test_name, "when copying %c bytes from str to str", n));
+	it(formated_string(test_name, "when copying %d bytes from str to str", n));
 	void *src;
 	void *dest;
 	void *dest_expected;
@@ -41,7 +41,7 @@ void test_memcpy_return_value(size_t n)
 {
 	char test_name[MAX_ERROR_MSG_LEN];
 
-	it(formated_string(test_name, "when copying %c bytes from int memory space to int memory space", n));
+	it(formated_string(test_name, "when copying %d bytes from int memory space to int memory space", n));
 	int src[5] = {1, 1020, 3, 4, 5};
 	void *dest;
 
@@ -57,7 +57,7 @@ void test_memcpy_int(size_t n)
 {
 	char test_name[MAX_ERROR_MSG_LEN];
 
-	it(formated_string(test_name, "when copying %c bytes from int memory space to int memory space", n));
+	it(formated_string(test_name, "when copying %d bytes from int memory space to int memory space", n));
 	int src[5] = {1, 1020, 3, 4, 5};
 	void *dest;
 	void *dest_expected;
@@ -98,6 +98,10 @@ int	main(int argc, char **argv)
 		test_memcpy_return_value(10);
 	end_describe();
 
+	describe("When both params are null");
+	it("should not error");
+		ft_memcpy(0, 0, 10);
+		memcpy(0, 0, 10);
 	end_describe();
 	return (test_status());
 }

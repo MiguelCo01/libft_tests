@@ -11,3 +11,9 @@ PART_1_REQUIRED_FUN=( \
 'ft_putendl_fd' \
 'ft_putnbr_fd' \
 )
+
+# Compile Bonus version
+BINARY_COMPILATION_COMMAND=all
+
+#Set Test Compilation Command
+TEST_COMPILATION_COMMAND= 

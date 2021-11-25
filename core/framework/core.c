@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   core.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmelo-da <mmelo-da@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: mmelo-da <mmelo-da@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 18:45:49 by mmelo-da          #+#    #+#             */
-/*   Updated: 2021/11/06 19:40:32 by mmelo-da         ###   ########.fr       */
+/*   Updated: 2021/11/24 20:17:18 by mmelo-da         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,7 @@ int		g_it_run = 0;
 
 void	setup(int argc, char **argv)
 {
-	if (argc == 2 && strcmp(argv[1], "-no-run") == 0)
-	{
-		g_mode = 2;
-		return ;
-	}
+
 	if (argc == 2 && atoi(argv[1]) > 0)
 	{
 		g_mode = 1;
@@ -38,18 +34,13 @@ void	setup(int argc, char **argv)
 
 void	describe(char *sutie_name)
 {
-	if (g_mode == 2)
-		return;
-
 	g_cur_suite = sutie_name;
-
 }
 
 void	end_describe()
 {
-	if (g_mode == 2)
-		return;
-	else if (g_mode == 0 || (g_mode == 1 && g_total_it == g_it_run))
+
+	if (g_mode == 0 || (g_mode == 1 && g_total_it == g_it_run))
 	{
 		if (g_it_status == 1)
 		{
@@ -80,9 +71,8 @@ void	it(char *test_name)
 
 void	end_it(void)
 {
-	if (g_mode == 2)
-		return ;
-	else if (g_mode == 0 || (g_mode == 1 && g_total_it == g_it_run))
+
+	if (g_mode == 0 || (g_mode == 1 && g_total_it == g_it_run))
 	{
 		if (g_it_status == 1)
 		{
@@ -98,8 +88,6 @@ void	assertion_fail(char *error_msg, ...)
 	va_list	valist;
 	char	formated_error_msg[MAX_ERROR_MSG_LEN];
 
-	if (g_mode == 2)
-		return ;
 	if (g_mode == 0 || (g_mode == 1 && g_total_it == g_it_run))
 	{
 		if (g_suite_status == 1)
@@ -128,7 +116,9 @@ void	assertion_pass(void)
 
 int		test_status(void)
 {
-	if (g_mode == 2)
-		return (g_total_it);
-	return (!g_suite_status);
+
+	if (g_it_run > g_total_it)
+		return (255);
+	else
+		return (!g_suite_status);
 }

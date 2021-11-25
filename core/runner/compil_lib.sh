@@ -13,13 +13,18 @@
 # **************************************************************************** #
 compile_binary()
 {
-	printf "$> make -C -g "$MK_PATH" all 1>/dev/null 2>&1" >> ${PATH_DEEPTHOUGHT}/deepthought
-	RESULT=$(make -C -g "$MK_PATH" all 1>&1 2>&1)
+	set_makefile_var
+	printf "\n$> make -C ${MK_PATH} ${BINARY_COMPILATION_COMMAND}" >> ${PATH_DEEPTHOUGHT}/deepthought
+	printf "Compiling with make file ${MK_PATH}\n"
+	printf "Running make -C ${MK_PATH} ${BINARY_COMPILATION_COMMAND}\n"
+	RESULT=$(make -C ${MK_PATH} ${BINARY_COMPILATION_COMMAND})
 	HAS_ERROR=$(echo ${RESULT} | grep errors)
 	if [ "${HAS_ERROR}" != "" ]
 	then
 		printf "${RED}Error Compiling \n ${DEFAULT}${RESULT}"
 		exit 1
+	else
+		printf "${GREEN}Compilation OK! \n ${DEFAULT}"
 	fi
 }
 

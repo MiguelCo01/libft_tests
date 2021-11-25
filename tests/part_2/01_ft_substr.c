@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   01_ft_substr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmelo-da <mmelo-da@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: mmelo-da <mmelo-da@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 21:49:30 by mmelo-da          #+#    #+#             */
-/*   Updated: 2021/11/13 15:38:49 by mmelo-da         ###   ########lyon.fr   */
+/*   Updated: 2021/11/24 00:22:40 by mmelo-da         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	main(int argc, char **argv)
 		it("if string = '' and start = 6 and len = 5");
 			s = "";
 			sub = ft_substr(s, 6, 5);
-			assert_equal_ptr(sub, NULL, NULL);
+			assert_equal_str(sub, "", NULL);
 			free(sub);
 		it("if string = 'orem ipsum dolo' and start = 6 and len = 0");
 			s = "lorem ipsum dolo";
@@ -53,6 +53,10 @@ int	main(int argc, char **argv)
 			sub = ft_substr(s, 6, 0);
 			assert_equal_ptr(sub, NULL, NULL);
 			mock_malloc(0);
+		it("should return empty string");
+			s = "tripouille";
+			sub = ft_substr(s, 100, 1);
+			assert_equal_str(sub, "", NULL);
 	end_describe();
 
 	return (test_status());

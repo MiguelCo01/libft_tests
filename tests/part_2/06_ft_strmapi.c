@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   06_ft_strmapi.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmelo-da <mmelo-da@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: mmelo-da <mmelo-da@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 14:40:22 by mmelo-da          #+#    #+#             */
-/*   Updated: 2021/11/21 16:48:39 by mmelo-da         ###   ########lyon.fr   */
+/*   Updated: 2021/11/24 00:27:03 by mmelo-da         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ char	mapper_to_index(unsigned	int i, char c)
 	return ((i % 10) + '0');
 }
 
+char addOne(unsigned int i, char c) {return (i + c);}
 
 
 int	main(int argc, char **argv)
@@ -62,6 +63,11 @@ int	main(int argc, char **argv)
 			assert_equal_str(ft_strmapi("Lorem iPsum Dolor sIt aMEt", mapper_to_lower), "lorem ipsum dolor sit amet", NULL);
 		it("should make pass correct current index to f");
 			assert_equal_str(ft_strmapi("Lorem iPsum Dolor sIt aMEt", mapper_to_index), "01234567890123456789012345", NULL);
+		it("should make pass correct current index to f");
+			char *s = ft_strmapi("1234", addOne);
+			free(s);
+			s = ft_strmapi("", addOne);
+			assert_equal_str(s, "", NULL);
 	end_describe();
 	return (test_status());
 }

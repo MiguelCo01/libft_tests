@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   09_ft_memmove.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmelo-da <mmelo-da@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: mmelo-da <mmelo-da@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 09:57:38 by mmelo-da          #+#    #+#             */
-/*   Updated: 2021/11/08 11:25:12 by mmelo-da         ###   ########.fr       */
+/*   Updated: 2021/11/23 22:22:37 by mmelo-da         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,12 @@ int	main(int argc, char ** argv)
 			dest = src + 1;
 			assert_equal_memory((char *) ft_memmove(dest, "con\0sec\0\0te\0tur", 10), "con\0sec\0\0t dolor sit a", 22, NULL);
 			free(src);
+		it("Handles inverse");
+			char sResult[] = {67, 68, 67, 68, 69, 0, 45};
+			char sResult2[] = {67, 67, 68, 68, 69, 0, 45};
+			assert_equal_ptr(ft_memmove(sResult + 1, sResult, 2), sResult + 1, NULL);
+			assert_equal_memory(sResult, sResult2, 7, NULL);
+			
 	end_describe();
 
 	describe("copies from src to dest - overlap");

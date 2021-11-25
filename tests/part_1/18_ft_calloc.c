@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   17_ft_calloc.c                                     :+:      :+:    :+:   */
+/*   18_ft_calloc.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmelo-da <mmelo-da@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: mmelo-da <mmelo-da@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 09:12:53 by mmelo-da          #+#    #+#             */
-/*   Updated: 2021/11/10 09:38:58 by mmelo-da         ###   ########.fr       */
+/*   Updated: 2021/11/24 01:56:48 by mmelo-da         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,14 @@ int	main(int argc, char **argv)
 			char *expected = "\0\0\0\0\0\0\0\0\0\0";
 			assert_equal_memory(ft_calloc(10, 1), expected, 10, NULL);
 		it("returns NULL if nmemb is 0");
-			assert_equal_ptr(ft_calloc(0, 1), NULL, NULL);
-		it("returns NULL if nmemb is 0");
 			assert_equal_ptr(ft_calloc(INT32_MAX, 2), NULL, NULL);
+		it("works with empty strings?");
+			int size = 8539;
+			void * d1 = ft_calloc(size, sizeof(int));
+			void * d2 = calloc(size, sizeof(int));
+			assert_equal_memory(d1, d2, size * sizeof(int), NULL);
+			free(d1);
+			free(d2);
 	end_describe();
-
 	return (test_status());
 }

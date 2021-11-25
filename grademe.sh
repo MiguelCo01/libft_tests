@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    grademe.sh                                         :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mmelo-da <mmelo-da@student.42lisboa.com    +#+  +:+       +#+         #
+#    By: mmelo-da <mmelo-da@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 13:11:44 by mmelo-da          #+#    #+#              #
-#    Updated: 2021/11/13 19:09:57 by mmelo-da         ###   ########lyon.fr    #
+#    Updated: 2021/11/24 18:57:59 by mmelo-da         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,23 +96,12 @@ then
 	check_norminette
 fi
 
-if [ ${HAS_BINARY} == 1 ]
-then
-	set_makefile_var
-
-	if [ ${RUN_CORE} == 1 ]
-	then
-		makefile_check_rules
-	fi
-	compile_binary
-fi
-
-
 if [ ${RUN_TEST} == 1 ]
 then
 	printf "\n\n"
 	run_all_tests
 fi
+
 if [ ${DEBUG} == 0 ]
 then
 	rm_files

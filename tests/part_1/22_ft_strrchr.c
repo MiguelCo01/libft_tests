@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   21_ft_strrchr.c                                    :+:      :+:    :+:   */
+/*   22_ft_strrchr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmelo-da <mmelo-da@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: mmelo-da <mmelo-da@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 19:52:30 by mmelo-da          #+#    #+#             */
-/*   Updated: 2021/11/10 20:08:40 by mmelo-da         ###   ########.fr       */
+/*   Updated: 2021/11/23 22:57:07 by mmelo-da         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,9 @@ int	main(int argc, char **argv)
 		it("s = abcda and c = a");
 			s = "abcda";
 			assert_equal_ptr(ft_strrchr(s, 'a'), s + 4, NULL);
+		it("s = abcd and c = a + 256, should find the first a");
+			s = "abcd";
+			assert_equal_ptr(ft_strrchr(s, 'a' + 256), s, NULL);
 	end_describe();
 
 	return (test_status());

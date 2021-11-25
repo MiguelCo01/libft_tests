@@ -5,7 +5,7 @@
 ###################################
 
 #Edit the next line with the path of your libft project.
-PATH_LIBFT=/goinfre/mmelo-da/libft
+PATH_LIBFT=/Users/mmelo-da/Desktop/projects/libft
 TMP_TESTS_DIR=TEMP_FILES
 
 REQUIRED_FUN=(

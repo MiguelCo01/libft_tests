@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   23_ft_strnstr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmelo-da <mmelo-da@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: mmelo-da <mmelo-da@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 20:11:18 by mmelo-da          #+#    #+#             */
-/*   Updated: 2021/11/11 19:38:25 by mmelo-da         ###   ########lyon.fr   */
+/*   Updated: 2021/11/23 23:34:12 by mmelo-da         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,19 @@ int	main(int argc, char **argv)
 			big = "lorem ipsum dolor sit amet";
 			little = "dolor";
 			assert_equal_ptr(ft_strnstr(big, little, 15), strnstr(big, little, 15), NULL);
+		it("should return start if string is empty");
+			big = (char*)"";
+			little = "";		
+			assert_equal_ptr(ft_strnstr(big, little, 0), strnstr(big, little, 0), NULL);
+		it("should return empty if bug is empty and little has value");
+			big = (char*)"";
+			little = "coucou";		
+			assert_equal_ptr(ft_strnstr(big, little, -1), strnstr(big, little, -1), NULL);
+			assert_equal_ptr(ft_strnstr(big, little, -1), 0, NULL);
+		it("it should return start of string if the little is exactly equal to the start until n chars");
+			big = "aaabcabcd";
+			little = "aaabc";
+			assert_equal_ptr(ft_strnstr(big, little, 5), big, NULL);
 	end_describe();
 
 	return (test_status());
